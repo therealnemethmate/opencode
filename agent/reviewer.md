@@ -65,6 +65,7 @@ Analyze code for these concern types:
 - Null/undefined handling
 - Async/await correctness (missing awaits, unhandled rejections)
 - Race conditions in concurrent code
+- Call @consistency-police for style/convention checks
 
 ### 2. Security
 
