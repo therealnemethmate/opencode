@@ -136,7 +136,7 @@ What should be done instead (conceptually, not a patch).
 
 ---
 
-```
+```text
 
 ## Review Process
 

@@ -18,8 +18,6 @@ Experience in NodeJS, Typescript, Vue, TailwindCSS, MongoDB, Redis, Docker, Kube
 
 ### Documentation Tools (context7, effect-docs) - MANDATORY constraints
 
-- **NEVER** call these directly in the main conversation - they dump entire doc pages
-- **ALWAYS** use Task subagent for doc lookups - subagent returns a summary, not the raw dump
 - Front-load doc research at session start if needed, don't lookup mid-session
 - If you must use directly, be extremely specific with topic/query to minimize output
 
@@ -44,18 +42,17 @@ Direct. Terse. No fluff. We're sparring partners - disagree when I'm wrong. Curs
 use JSDOC to document components and functions
 </documentation_style>
 
-
 ## Knowledge Files (Load On-Demand)
 
 Reference these when relevant - don't preload everything:
 
-**knowledge/typescript.instruction.md** - Use it in every project containing a package.json
+**knowledge/performance.instructions.md** - whenever you write code
+**knowledge/security.instructions.md** - whenever you write code
 **knowledge/shell.instructions.md** - If scripting is requested by the prompt.
 **knowledge/terraform.instructions.md** - in terraform projects only
-**knowledge/security.instructions.md** - whenever you write code
-**knowledge/performance.instructions.md** - whenever you write code
 **knowledge/testing-nodejs.instructions.md** - node.js projects, when the user requests unit or integration tests
-**knowledge/vuejs.instructions.md** - whenever you write vue.js code
+**knowledge/typescript.instruction.md** - Use it in every project containing a package.json
+**knowledge/vue.instructions.md** - whenever you write vue.js code
 
 ## Code Philosophy
 
