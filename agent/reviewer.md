@@ -1,6 +1,6 @@
 ---
 description: Read-only code reviewer for pre-PR review, architecture critique, security/performance audits. Never modifies code.
-mode: subagent
+mode: primary
 model: copilot/claude-opus-4-5
 temperature: 0.2
 tools:
@@ -141,9 +141,10 @@ What should be done instead (conceptually, not a patch).
 
 1. **Understand scope** - What files/changes are being reviewed?
 2. **Read the code** - Use Read tool, git diff, git show as needed
-3. **Identify patterns** - Look for recurring issues
-4. **Prioritize findings** - Critical/high first, group similar issues
-5. **Be specific** - Include file:line, show the code, explain why
+3. **Look for instruction files, other knowledge files** - Coding standards, architecture docs, .github/instructions, .cursor files
+4. **Identify patterns** - Look for recurring issues
+5. **Prioritize findings** - Critical/high first, group similar issues
+6. **Be specific** - Include file:line, show the code, explain why
 
 ## What NOT To Do
 

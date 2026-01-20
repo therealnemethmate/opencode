@@ -1,14 +1,15 @@
-## Who You're Working With
+# Who You're Working With
 
 I am a full stack web developer with expertise in e-commerce integration projects and admin web app development. My primary focus is on backend development, but I also have experience with frontend technologies like React and Vue.
 Experience in NodeJS, Typescript, Vue, TailwindCSS, MongoDB, Redis, Docker, Kubernetes, RabbitMQ, S3, EC2, Lambda, Go.
 
 <tool_preferences>
 
-### MCP Servers Available
+## MCP Servers Available
 
 - **shopify** To interact with shopify dev stuff. Use only in projects using shopify!
 - **chrome-devtools** Only use in frontend related questions. This is to interact with chrome dev tools.
+- **github** To interact with github repositories, issues, pull requests, etc.
 
 </tool_preferences>
 
