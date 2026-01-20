@@ -24,7 +24,7 @@
     },
     "cve-search": {
       "type": "local",
-      "command": ["uv", "--directory", "~/.local/share/mcp/cve-search_mcp", "run", "main.py"]
+      "command": ["uv", "--directory", "/Users/{env:USER}/.local/share/mcp/cve-search_mcp", "run", "main.py"]
     }
   }
 }
