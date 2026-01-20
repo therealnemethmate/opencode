@@ -54,6 +54,18 @@ These instructions guide GitHub Copilot to suggest secure, intentional code patt
 
 ---
 
+## 5. CVE Awareness (use cve-search MCP)
+
+- Before adding or updating dependencies, query CVE database for known vulnerabilities.
+- When reviewing code that uses third-party libraries, check for recent CVEs affecting those vendors/products.
+- Use `vul_for_vendor_product` to check specific library versions for known vulnerabilities.
+- Use `vul_last_cves` to stay informed about the latest 30 CVEs — review weekly for relevant threats.
+- Use `cve_for_cve_id` to get full details when a CVE is mentioned in security advisories or audits.
+- Cross-reference AI-suggested packages against CVE data before adoption.
+- Document known CVEs and mitigations in security review notes when accepting risk.
+
+---
+
 ## Developer Tips
 
 - If you’re working with input, assume it’s hostile — validate and escape it.

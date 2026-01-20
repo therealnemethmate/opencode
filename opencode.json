@@ -21,6 +21,10 @@
       "environment": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
       }
+    },
+    "cve-search": {
+      "type": "local",
+      "command": ["uv", "--directory", "~/.local/share/mcp/cve-search_mcp", "run", "main.py"]
     }
   }
 }

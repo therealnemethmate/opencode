@@ -10,6 +10,11 @@ tools:
   edit: false
   glob: true
   grep: true
+  mcp_cve-search_*: true
+  mcp_github_search_*: true
+  mcp_github_issue_read: true
+  mcp_github_list_*: true
+  mcp_github_get_*: true
 permission:
   bash:
     "git diff *": allow
@@ -74,6 +79,7 @@ Analyze code for these concern types:
 - Secrets in code or logs
 - Unsafe deserialization
 - Missing input validation
+- Use knowledge/security.instructions.md for detailed security guidelines
 
 ### 3. Performance
 
