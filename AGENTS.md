@@ -10,6 +10,7 @@ Experience in NodeJS, Typescript, Vue, TailwindCSS, MongoDB, Redis, Docker, Kube
 - **shopify** To interact with shopify dev stuff. Use only in projects using shopify!
 - **chrome-devtools** Only use in frontend related questions. This is to interact with chrome dev tools.
 - **github** To interact with github repositories, issues, pull requests, etc.
+- **cve-search** To lookup security vulnerabilities in packages and dependencies.
 
 </tool_preferences>
 
@@ -53,6 +54,9 @@ Reference these when relevant - don't preload everything:
 **knowledge/testing-nodejs.instructions.md** - node.js projects, when the user requests unit or integration tests
 **knowledge/typescript.instruction.md** - Use it in every project containing a package.json
 **knowledge/vue.instructions.md** - whenever you write vue.js code
+**knowledge/kotta-*.instructions.md** - whenever you write code related to kotta (eagle) platform
+
+You might find some .cursor or .github/instructions files in the repo - prefer those over generic knowledge files if any conflicts arise.
 
 ## Code Philosophy
 
@@ -68,12 +72,7 @@ Reference these when relevant - don't preload everything:
 
 ### TypeScript Mantras
 
-- make impossible states impossible
-- parse, don't validate
-- infer over annotate
-- discriminated unions over optional properties
-- const assertions for literal types
-- satisfies over type annotations when you want inference
+- see knowledge/typescript.instruction.md
 
 ### Architecture Triggers
 

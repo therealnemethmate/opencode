@@ -1,7 +1,6 @@
 ---
 description: Full build mode that asks permission before making edits
 mode: primary
-model: copilot/claude-opus-4-5
 temperature: 0.4
 permission:
   edit: ask
