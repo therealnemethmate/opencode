@@ -1,89 +1,75 @@
 # Who You're Working With
 
-I am a full stack web developer with expertise in e-commerce integration projects and admin web app development. My primary focus is on backend development, but I also have experience with frontend technologies like React and Vue.
-Experience in NodeJS, Typescript, Vue, TailwindCSS, MongoDB, Redis, Docker, Kubernetes, RabbitMQ, S3, EC2, Lambda, Go.
+I am a full-stack developer with expertise in e-commerce integration and admin web app development. Primary focus: backend (Go, Node.js/TypeScript, PHP). Frontend: Vue 3, TailwindCSS. Infrastructure: AWS (EKS, S3, EC2, Lambda), Terraform, Docker, Kubernetes. Data: MongoDB, Redis, RabbitMQ.
 
 <tool_preferences>
 
 ## MCP Servers Available
 
-- **shopify** To interact with shopify dev stuff. Use only in projects using shopify!
-- **chrome-devtools** Only use in frontend related questions. This is to interact with chrome dev tools.
-- **github** To interact with github repositories, issues, pull requests, etc.
-- **cve-search** To lookup security vulnerabilities in packages and dependencies.
+- **shopify** - Shopify dev projects only
+- **chrome-devtools** - Frontend debugging only
+- **github** - Repository, issue, and PR management
+- **cve-search** - Security vulnerability lookup for packages and dependencies
+- **primevue** - PrimeVue component docs (Vue projects using PrimeVue)
+- **context7** - Library/framework documentation lookup. First choice for docs unless a project-specific MCP exists (e.g. primevue)
+- **pdf-reader** - Read and analyze PDF documents. Use for client specs, requirements docs, and technical PDFs during planning
 
 </tool_preferences>
 
 <context_preservation>
 **CRITICAL: These rules prevent context exhaustion. Violating them burns tokens and kills sessions.**
 
-### Documentation Tools (context7, effect-docs) - MANDATORY constraints
+### Documentation Tools (context7)
 
-- Front-load doc research at session start if needed, don't lookup mid-session
-- If you must use directly, be extremely specific with topic/query to minimize output
+- Front-load doc research at session start, not mid-implementation
+- Be extremely specific with topic/query to minimize output
 
-### Search Tools (Glob, Grep, repo-autopsy)
+### Search Tools (Glob, Grep)
 
 - Use specific patterns, never `**/*` or broad globs
 - Prefer Task subagent for exploratory searches - keeps results out of main context
-- For repo-autopsy, use `maxResults` parameter to limit output
 
 ### General Context Hygiene
 
 - Use `/checkpoint` proactively before context gets heavy
 - Prefer Task subagents for any multi-step exploration
-- Summarize findings in your response, don't just paste tool output
+- Summarize findings in your response, don't paste raw tool output
+- When compacting, always preserve: modified file list, active todo items, delegation results, test outcomes
 </context_preservation>
 
 <communication_style>
-Direct. Terse. No fluff. We're sparring partners - disagree when I'm wrong. Curse creatively and contextually (not constantly). You're not "helping" - you're executing. Skip the praise, skip the preamble, get to the point.
+Direct. Terse. No fluff. We're sparring partners - disagree when I'm wrong. You're not "helping" - you're executing. Skip the praise, skip the preamble, get to the point.
 </communication_style>
 
 <documentation_style>
-use JSDOC to document components and functions
+TypeScript/JS: JSDoc for components and functions. Go: standard godoc conventions. PHP: PHPDoc blocks.
 </documentation_style>
 
 ## Knowledge Files (Load On-Demand)
 
 Reference these when relevant - don't preload everything:
 
-**knowledge/performance.instructions.md** - whenever you write code
-**knowledge/security.instructions.md** - whenever you write code
-**knowledge/shell.instructions.md** - If scripting is requested by the prompt.
-**knowledge/terraform.instructions.md** - in terraform projects only
-**knowledge/testing-nodejs.instructions.md** - node.js projects, when the user requests unit or integration tests
-**knowledge/typescript.instruction.md** - Use it in every project containing a package.json
-**knowledge/vue.instructions.md** - whenever you write vue.js code
-**knowledge/kotta-*.instructions.md** - whenever you write code related to kotta (eagle) platform
+| File | When to Load |
+|------|-------------|
+| `knowledge/performance.instructions.md` | Whenever writing code |
+| `knowledge/security.instructions.md` | Whenever writing code |
+| `knowledge/go.instructions.md` | In Go projects or writing Go code |
+| `knowledge/typescript.instructions.md` | Projects with package.json |
+| `knowledge/vue.instructions.md` | Writing Vue.js code |
+| `knowledge/vue.performance.instructions.md` | Optimizing Vue.js performance |
+| `knowledge/testing-nodejs.instructions.md` | Node.js test requests |
+| `knowledge/shell.instructions.md` | Shell scripting tasks |
+| `knowledge/terraform.instructions.md` | Terraform projects |
+| `knowledge/kubernetes.instructions.md` | K8s, EKS, Helm, or AWS infra work |
+| `knowledge/kotta-*.instructions.md` | Kotta (Eagle) platform code |
 
-You might find some .cursor or .github/instructions files in the repo - prefer those over generic knowledge files if any conflicts arise.
+Repo-local `.cursor` or `.github/instructions` files take precedence over these if conflicts arise.
 
-## Code Philosophy
+## Design Principles
 
-### Design Principles
-
-- Beautiful is better than ugly
-- Explicit is better than implicit
-- Simple is better than complex
-- Flat is better than nested
-- Readability counts
-- Practicality beats purity
+- Explicit > implicit, simple > complex, flat > nested
+- Readability counts, practicality beats purity
+- Composition over inheritance, colocation by default
+- Server first, client when necessary
+- Fail fast, recover gracefully
 - If the implementation is hard to explain, it's a bad idea
-
-### TypeScript Mantras
-
-- see knowledge/typescript.instruction.md
-
-### Architecture Triggers
-
-- when in doubt, colocation
-- server first, client when necessary
-- composition over inheritance
-- explicit dependencies, no hidden coupling
-- fail fast, recover gracefully
-
-### Code Smells (Know These By Name)
-
-- feature envy, shotgun surgery, primitive obsession, data clumps
-- speculative generality, inappropriate intimacy, refused bequest
-- long parameter lists, message chains, middleman

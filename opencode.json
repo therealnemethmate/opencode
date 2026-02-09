@@ -25,6 +25,18 @@
     "cve-search": {
       "type": "local",
       "command": ["uv", "--directory", "/Users/{env:USER}/.local/share/mcp/cve-search_mcp", "run", "main.py"]
+    },
+    "primevue": {
+        "type": "local",
+        "command": ["npx", "-y", "@primevue/mcp"]
+    },
+    "pdf-reader": {
+        "type": "local",
+        "command": ["npx", "-y", "@fabriqa.ai/pdf-reader-mcp"]
+    },
+    "context7": {
+        "type": "local",
+        "command": ["npx", "-y", "@upstash/context7-mcp@latest"]
     }
   }
 }
