@@ -99,7 +99,6 @@ serviceAccount:
 - Use Prometheus metrics endpoint (`/metrics`)
 - `kubectl describe pod` for events
 - `kubectl logs --previous` for crash logs
-- `kubectl exec -it` for debugging (don't install debug tools in prod images)
 
 ## Common Pitfalls
 

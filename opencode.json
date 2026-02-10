@@ -38,5 +38,68 @@
         "type": "local",
         "command": ["npx", "-y", "@upstash/context7-mcp@latest"]
     }
+  },
+  "agent": {
+    "implementer": {
+      "tools": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "glob": true,
+        "grep": true,
+        "bash": true,
+        "shopify": true,
+        "primevue": true,
+        "github": true
+      }
+    },
+    "test-runner": {
+      "tools": {
+        "read": true,
+        "glob": true,
+        "grep": true,
+        "bash": true,
+        "chrome-devtools": true
+      }
+    },
+    "explorer": {
+      "tools": {
+        "read": true,
+        "glob": true,
+        "grep": true,
+        "shopify": true,
+        "primevue": true,
+        "github": true
+      }
+    },
+    "researcher": {
+      "tools": {
+        "read": true,
+        "webfetch": true,
+        "context7": true,
+        "cve-search": true,
+        "pdf-reader": true
+      }
+    },
+    "general": {
+      "tools": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "glob": true,
+        "grep": true,
+        "bash": true,
+        "todowrite": true,
+        "webfetch": true,
+        "task": true,
+        "shopify": true,
+        "primevue": true,
+        "github": true,
+        "chrome-devtools": true,
+        "cve-search": true,
+        "pdf-reader": true,
+        "context7": true
+      }
+    }
   }
 }

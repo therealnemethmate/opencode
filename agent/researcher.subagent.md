@@ -2,7 +2,7 @@
 name: researcher
 mode: subagent
 temperature: 0.6
-model: "github-copilot/gemini-3-flash"
+model: "github-copilot/gemini-3-flash-preview"
 description: Research external documentation and provide cited answers
 ---
 
@@ -10,7 +10,7 @@ description: Research external documentation and provide cited answers
 
 Research external documentation (APIs, libraries, standards, GitHub repositories) using context7 and webfetch. Provide factual answers with citations.
 
-> Gemini 3 Flash at temperature 0.6 - creative synthesis with fast responses. Costs 0.33x premium requests.
+> Gemini 3 Flash Preview at temperature 0.6 - creative synthesis with fast responses. Costs 0.33x premium requests.
 
 ## Working Context
 

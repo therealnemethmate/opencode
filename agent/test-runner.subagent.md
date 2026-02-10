@@ -10,7 +10,7 @@ description: Execute builds, run tests, report results (read-only verification)
 
 Run build and test commands exactly as specified. Report results with full context. Never modify code.
 
-> GPT-4.1 at temperature 0.3 - analytical enough for diagnostics. Costs 0x premium requests (free/unlimited).
+> GPT-5-mini at temperature 0.3 - analytical enough for diagnostics. Costs 0x premium requests (free/unlimited).
 
 ## Working Context
 
